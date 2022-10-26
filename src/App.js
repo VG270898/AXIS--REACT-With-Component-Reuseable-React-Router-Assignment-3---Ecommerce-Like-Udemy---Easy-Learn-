@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './NavComponents/NavBar';
+import Home from './NavComponents/Home';
+import About from './NavComponents/About';
+import Profile from './NavComponents/Profile';
+import Login from './NavComponents/Login';
+import Footer from './NavComponents/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+function App(){
+    return (
+        <BrowserRouter>
+        <div style={{padding:'20px'}}>
+
+            <Navbar/>
+            <hr></hr>
+            <Routes>
+                <Route exact path="/" element={<Home/>} />
+                <Route path="/home" element={<Home/>} />
+                <Route path="/about" element={<About />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
+            <hr style={{marginTop:'40px'}}></hr>
+
+            <Footer/>
+
+        </div>
+        </BrowserRouter>
+
+
+    )
+    // return(
+        
+        
+    //     <BrowserRouter>
+    //   <div className="App">
+    //     <Navbar />
+    //     <div className="content">
+    //       <Routes>
+    //         <Route exact path="/" element={<Home/>} />
+    //         <Route exact path="/home" element={<Home/>} />
+    //         <Route path="/about" element={<About />} />
+    //         <Route path="/contact" element={<Contact />} />
+    //       </Routes>
+    //     </div>
+    //   </div>
+    // </BrowserRouter>
+
+        
+    // )
 }
-
-export default App;
+export default App
