@@ -5,7 +5,7 @@ import i2 from "./image/insta.png"
 import i3 from "./image/youtube.png"
 import i4 from "./image/twitter.png"
 import i5 from "./image/link.png"
-import logo from "./image/logobw.png"
+import logo from "./image/logobw2.png"
 
 
 const Footer = ()=>{
